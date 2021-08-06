@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #8ba4a6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 3vmin);
+  color: white;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input[type="text"] {
+  background-color: #c6bff2;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid #8f8ba6;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left;
+  background-position: 0px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 10px;
+  box-shadow: 7px 5px 7px 1px #4d4c4c;
+}
+
+button {
+  background-color: #bfeef2;
+  box-sizing: border-box;
+  border: 2px solid #8f8ba6;
+  border-radius: 5px;
+  text-align: center;
+  padding: 7px 13px 7px 13px;
+  box-shadow: 7px 5px 7px 1px #4d4c4c;
+}
