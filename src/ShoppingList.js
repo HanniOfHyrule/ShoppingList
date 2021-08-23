@@ -14,10 +14,11 @@ const initialList = [
 ];
 
 const App = () => {
-  const [listData, dispatchListData] = React.useState(listReducer, {
+  const [listData, setListData] = React.useState({
     list: initialList,
     isShowList: true,
   });
+
   const [name, setName] = React.useState("");
 
   function handleChange(event) {
@@ -25,10 +26,14 @@ const App = () => {
   }
 
   function handleAdd() {
-    dispatchListData({ type: "ADD_ITEM", name, id: uuidv4() });
+    setListData({
+      ...listData,
+      list: listData.list.concat({ name: name, id: uuidv4() }),
+    });
 
     setName("");
   }
+
   return (
     <div>
       <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
@@ -37,6 +42,7 @@ const App = () => {
     </div>
   );
 };
+
 const AddItem = ({ name, onChange, onAdd }) => (
   <div>
     <input type="text" value={name} onChange={onChange} />
@@ -45,24 +51,15 @@ const AddItem = ({ name, onChange, onAdd }) => (
     </button>
   </div>
 );
-const List = ({ list }) => (
-  <ul>
-    {list.map((item) => (
-      <li key={item.id}>{item.name}</li>
-    ))}
-  </ul>
-);
 
-const listReducer = (state, action) => {
-  switch (action.type) {
-    case "ADD_ITEM":
-      return {
-        ...state,
-        list: state.list.concat({ name: action.name, id: action.id }),
-      };
-    default:
-      throw new Error();
-  }
+const List = ({ list }) => {
+  return (
+    <ul>
+      {list.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default App;
