@@ -14,10 +14,13 @@ const initialList = [
 ];
 
 const App = () => {
-  const [listData, dispatchListData] = React.useState(listReducer, {
-    list: initialList,
-    isShowList: true,
-  });
+  const [listData, dispatchListData] = React.useState(
+    {
+      list: initialList,
+      isShowList: true,
+    },
+    listReducer
+  );
   const [name, setName] = React.useState("");
 
   function handleChange(event) {
