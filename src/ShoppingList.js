@@ -54,9 +54,11 @@ const AddItem = ({ name, onChange, onAdd }) => (
 
 const List = ({ list }) => {
   return (
-    <ul>
+    <ul className="boxForItems">
       {list.map((item) => (
-        <li key={item.id}>{item.name}</li>
+        <li className="foodListItems" key={item.id}>
+          {item.name}
+        </li>
       ))}
     </ul>
   );
