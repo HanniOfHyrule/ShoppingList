@@ -1,0 +1,9 @@
+button {
+  background-color: #ebd9fa;
+  box-sizing: border-box;
+  border: 2px solid #5f9684;
+  border-radius: 5px;
+  text-align: center;
+  padding: 7px 13px 7px 13px;
+  box-shadow: 7px 5px 7px 1px #161515;
+}

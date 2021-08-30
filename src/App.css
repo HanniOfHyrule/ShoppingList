@@ -43,30 +43,6 @@ input[type="text"] {
   box-shadow: 7px 5px 7px 1px #252222;
 }
 
-button {
-  background-color: #ebd9fa;
-  box-sizing: border-box;
-  border: 2px solid #5f9684;
-  border-radius: 5px;
-  text-align: center;
-  padding: 7px 13px 7px 13px;
-  box-shadow: 7px 5px 7px 1px #161515;
-}
-
-.foodListItems {
-  height: 75px;
-  width: 75px;
-  font-size: small;
-  letter-spacing: 1px;
-  box-shadow: 1px 1px 1px 1px #161515;
-  cursor: pointer;
-  background-color: #709094;
-  list-style: none;
-  text-transform: uppercase;
-  border: 1.2px solid #635a6b;
-  border-radius: 20px;
-}
-
 .boxForItems {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

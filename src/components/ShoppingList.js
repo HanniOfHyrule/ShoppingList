@@ -1,6 +1,8 @@
 //import { name } from "file-loader";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import AddItem from "./AddItem";
+import List from "./List";
 
 const initialList = [
   {
@@ -40,27 +42,6 @@ const App = () => {
 
       <List list={listData.list} />
     </div>
-  );
-};
-
-const AddItem = ({ name, onChange, onAdd }) => (
-  <div>
-    <input type="text" value={name} onChange={onChange} />
-    <button type="button" onClick={onAdd}>
-      Add
-    </button>
-  </div>
-);
-
-const List = ({ list }) => {
-  return (
-    <ul className="boxForItems">
-      {list.map((item) => (
-        <li className="foodListItems" key={item.id}>
-          {item.name}
-        </li>
-      ))}
-    </ul>
   );
 };
 

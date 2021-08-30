@@ -1,5 +1,7 @@
 import "./App.css";
-import ShoppingList from "./ShoppingList";
+import "./components/List.css";
+import "./components/AddItem.css";
+import ShoppingList from "./components/ShoppingList";
 
 function App() {
   return (
