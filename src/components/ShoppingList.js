@@ -3,6 +3,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import AddItem from "./AddItem";
 import List from "./List";
+import { useState, useEffect } from "react";
 
 const initialList = [
   {

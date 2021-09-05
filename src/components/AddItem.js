@@ -1,4 +1,5 @@
 import react from "react";
+import "./AddItem.css";
 
 const AddItem = ({ name, onChange, onAdd }) => (
   <div>
