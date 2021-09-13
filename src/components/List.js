@@ -1,4 +1,3 @@
-import react from "react";
 import "./List.css";
 
 const List = ({ list }) => {

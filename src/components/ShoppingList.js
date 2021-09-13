@@ -3,7 +3,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import AddItem from "./AddItem";
 import List from "./List";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const initialList = [
   {
@@ -17,12 +17,12 @@ const initialList = [
 ];
 
 const App = () => {
-  const [listData, setListData] = React.useState({
+  const [listData, setListData] = useState({
     list: initialList,
     isShowList: true,
   });
 
-  const [name, setName] = React.useState("");
+  const [name, setName] = useState("");
 
   function handleChange(event) {
     setName(event.target.value);
