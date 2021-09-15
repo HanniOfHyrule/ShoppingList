@@ -17,7 +17,7 @@ const AddItem = ({ name, onChange: handleChange, onAdd }) => {
         onChange={handleChange}
         onKeyPress={handleKeyPress}
       />
-      <button type="button" id="btnSearch" onClick={onAdd} {clickHandler}>
+      <button type="button" id="btnSearch" onClick={onAdd}>
         Add
       </button>
     </div>
