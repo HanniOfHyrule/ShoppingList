@@ -11,7 +11,11 @@ const List = ({ list }) => {
   return (
     <ul className="boxForItems">
       {list.map((item) => (
-        <button className="foodListItems" key={item.id} onClick={clickHandler}>
+        <button
+          className="foodListItems"
+          key={item.id}
+          onClick={clickHandler}
+          type="submit">
           {item.name}
         </button>
       ))}
