@@ -3,16 +3,19 @@ import "./List.css";
 import { useState } from "react";
 
 const List = ({ list }) => {
+  const [name, setName] = useState();
+  const clickHandler = () => {
+    setName(name);
+    console.log(name);
+  };
   return (
-    <div>
-      <ul className="boxForItems">
-        {list.map((item) => (
-          <li className="foodListItems" key={item.id}>
-            {item.name}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="boxForItems">
+      {list.map((item) => (
+        <button className="foodListItems" key={item.id} onClick={clickHandler}>
+          {item.name}
+        </button>
+      ))}
+    </ul>
   );
 };
 
