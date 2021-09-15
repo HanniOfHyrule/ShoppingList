@@ -1,4 +1,5 @@
 import "./AddItem.css";
+import List from "./List";
 
 const AddItem = ({ name, onChange: handleChange, onAdd }) => {
   const handleKeyPress = (e) => {
@@ -16,7 +17,7 @@ const AddItem = ({ name, onChange: handleChange, onAdd }) => {
         onChange={handleChange}
         onKeyPress={handleKeyPress}
       />
-      <button type="button" id="btnSearch" onClick={onAdd}>
+      <button type="button" id="btnSearch" onClick={onAdd} {clickHandler}>
         Add
       </button>
     </div>
