@@ -17,9 +17,7 @@ const initialList = [
 ];
 
 const ShoppingList = () => {
-  const [listData, setListData] = useState({
-    list: initialList,
-  });
+  const [listData, setListData] = useState(initialList);
 
   const [name, setName] = useState("");
 
@@ -28,10 +26,7 @@ const ShoppingList = () => {
   }
 
   function handleAdd() {
-    setListData({
-      ...listData,
-      list: listData.list.concat({ name: name, id: uuidv4() }),
-    });
+    setListData(listData.concat({ name: name, id: uuidv4() }));
 
     setName("");
   }
@@ -40,7 +35,7 @@ const ShoppingList = () => {
     <div>
       <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
 
-      <List list={listData.list} />
+      <List list={listData} />
     </div>
   );
 };
