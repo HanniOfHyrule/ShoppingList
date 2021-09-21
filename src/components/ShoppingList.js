@@ -1,6 +1,6 @@
 //import { name } from "file-loader";
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid"; // uuid zufallsbasierte eindeutige ID
 import AddItem from "./AddItem";
 import List from "./List";
 import { useState } from "react";
@@ -16,10 +16,9 @@ const initialList = [
   },
 ];
 
-const App = () => {
+const ShoppingList = () => {
   const [listData, setListData] = useState({
     list: initialList,
-    isShowList: true,
   });
 
   const [name, setName] = useState("");
@@ -46,4 +45,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ShoppingList;

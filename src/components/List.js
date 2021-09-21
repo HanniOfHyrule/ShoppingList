@@ -1,7 +1,7 @@
-import React from "react";
 import "./List.css";
 import { useState } from "react";
 
+// Listen status und
 const List = ({ list }) => {
   const [name, setName] = useState();
   const clickHandler = () => {
