@@ -2,7 +2,6 @@ import "./AddItem.css";
 
 const AddItem = ({ name, onChange: handleChange, onAdd }) => {
   const handleKeyPress = (e) => {
-    console.log(e);
     if (e.key === "Enter") {
       onAdd();
     }
