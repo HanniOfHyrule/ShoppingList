@@ -1,4 +1,4 @@
-## ShoppingList App
+# Shopping List App
 
 This is a List to add anything what you don't forget to buy.
 
@@ -8,4 +8,4 @@ You can add food or anything else to your list and it stores in your localstorag
 
 Than you can go Shopping. Have fun.
 
-More is in progress.
+More is in progress...
