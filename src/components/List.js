@@ -8,17 +8,29 @@ const List = ({ list }) => {
     setName(name);
     console.log(name);
   };
+
   return (
     <ul className="boxForItems">
-      {list.map((item) => (
-        <button
-          className="foodListItems"
-          key={item.id}
-          onClick={clickHandler}
-          type="submit">
-          {item.name}
-        </button>
-      ))}
+      {list
+        .sort(function (a, b) {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        })
+        .map((item) => (
+          <button
+            className="foodListItems"
+            key={item.id}
+            onClick={clickHandler}
+            type="submit">
+            {item.name}
+            {/*<button type="submit" id="delete" name="delete" />*/}
+          </button>
+        ))}
     </ul>
   );
 };
