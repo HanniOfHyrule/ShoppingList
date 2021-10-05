@@ -30,4 +30,5 @@ input[type="text"] {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 15px 15px;
+  margin-right: 31px;
 }
