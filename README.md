@@ -3,7 +3,7 @@
 
 This is a List to add anything what you don't forget to buy!
 
-## Looklike this 
+## Look like this 
 
 ![preview](preview.png)
 
