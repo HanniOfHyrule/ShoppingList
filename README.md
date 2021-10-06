@@ -1,10 +1,6 @@
 # Shopping List App
 ![preview](preview.png)
-This is a List to add anything what you don't forget to buy.
-
-### This is how the app looks!!!
-![Screenshot_20211004_202438](https://user-images.githubusercontent.com/83106116/135874052-9f5cb57c-9154-4be0-a937-cda8f095a5cd.png)
-
+This is a List to add anything what you don't forget to buy!
 
 ## Using it
 
