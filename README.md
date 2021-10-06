@@ -1,6 +1,11 @@
 # Shopping List App
-![preview](preview.png)
+
+
 This is a List to add anything what you don't forget to buy!
+
+## Looklike this 
+
+![preview](preview.png)
 
 ## Using it
 
