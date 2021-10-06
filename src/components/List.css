@@ -1,6 +1,6 @@
 .foodListItems {
-  height: 75px;
-  width: 75px;
+  height: 100%;
+  width: 100%;
   letter-spacing: 1px;
   box-shadow: 1px 1px 1px 1px #161515;
   cursor: pointer;
