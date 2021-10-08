@@ -5,26 +5,17 @@ import AddItem from "./AddItem";
 import List from "./List";
 import { useState, useEffect } from "react";
 
-const initialList = [
-  {
-    id: uuidv4(),
-    name: "Apple",
-  },
-  {
-    id: uuidv4(),
-    name: "Pears",
-  },
-];
-
 const save = (listData) => {
   localStorage.setItem("listDataStore", JSON.stringify(listData)); // legt daten in den localStorage
 };
-const load = () => {
-  const listData = JSON.parse(localStorage.getItem("listDataStore")); // holt daten aus dem localStorage
 
-  if (listData === null) {
-    return initialList;
-  }
+const load = () => {
+	let listData = [];
+
+	if(localStorage.getItem('listDataStore')){
+		listData = JSON.parse(localStorage.getItem("listDataStore")); // holt daten aus dem localStorage
+	}
+	
   return listData; //gibt geStorte liste aus - wenn noch keine vorhanden dann gibt er die initialList aus
 };
 
