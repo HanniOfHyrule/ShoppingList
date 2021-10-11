@@ -10,8 +10,20 @@
   font-size: small;
   text-transform: uppercase;
   border-radius: 25px;
-  margin:auto
+  margin:auto;
+  font-size: 12px;
+  width: 200px;
   /*text-align: center;
   vertical-align: middle;
   display: table;*/
+}
+
+/*Edit div*/
+.edit-div{
+  display: flex;
+  height: 30px;
+}
+/*Making edit div hidden*/
+.edit-hidden{
+  display: none;
 }
