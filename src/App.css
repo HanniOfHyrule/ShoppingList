@@ -8,6 +8,7 @@
   width: 1px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  font-variant: small-caps;
 }
 
 input[type="text"] {
