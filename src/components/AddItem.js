@@ -4,13 +4,13 @@ import "./AddItem.css";
 const AddItem = ({ name, onChange: handleChange, onAdd }) => {
   const inputRef = useRef();
   const handleKeyPress = (e) => {
-    if (e.key === "Enter" && inputRef.current.value != "") {
+    if (e.key === "Enter" && inputRef.current.value !== "") {
       onAdd();
     }
   };
 
   const handleClick = () => {
-    if (inputRef.current.value != "") {
+    if (inputRef.current.value !== "") {
       onAdd();
     }
   };
