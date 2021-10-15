@@ -10,12 +10,12 @@ const save = (listData) => {
 };
 
 const load = () => {
-	let listData = [];
+  let listData = [];
 
-	if(localStorage.getItem('listDataStore')){
-		listData = JSON.parse(localStorage.getItem("listDataStore")); // holt daten aus dem localStorage
-	}
-	
+  if (localStorage.getItem("listDataStore")) {
+    listData = JSON.parse(localStorage.getItem("listDataStore")); // holt daten aus dem localStorage
+  }
+
   return listData; //gibt geStorte liste aus - wenn noch keine vorhanden dann gibt er die initialList aus
 };
 
