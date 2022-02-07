@@ -9,10 +9,12 @@ This is a List to add anything what you don't forget to buy!
 ## Using it
 
 You can add food or anything else to your list and it stores in your localstorage.
+It will be save as List and as Button.
+
+Later you only have to press the button for frequently needed things.
+But this is in progress.
 
 Than you can go Shopping. Have fun.
-
-More is in progress...
 
 ## Requirements
 
