@@ -2,8 +2,9 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid"; // uuid zufallsbasierte eindeutige ID
 import AddItem from "./AddItem";
-import List from "./List";
+import FoodListItem from "./FoodListItem";
 import { useState, useEffect } from "react";
+import FoodButtonList from "./FoodButtonList";
 
 const save = (listData) => {
   localStorage.setItem("listDataStore", JSON.stringify(listData)); // legt daten in den localStorage
@@ -19,9 +20,8 @@ const load = () => {
   return listData; //gibt geStorte liste aus - wenn noch keine vorhanden dann gibt er die initialList aus
 };
 
-const ShoppingList = () => {
+const ShoppingCard = () => {
   const [listData, setListData] = useState(load());
-
   const [name, setName] = useState("");
 
   useEffect(() => {
@@ -39,11 +39,17 @@ const ShoppingList = () => {
   }
 
   return (
-    <div>
-      <AddItem name={name} onChange={handleChange} onAdd={handleAdd} />
-      <List list={listData} />
+    <div className="container mx-auto">
+      <AddItem
+        name={name}
+        onChange={handleChange}
+        onAdd={handleAdd}
+        className="bg-green-200 text-center "
+      />
+      <FoodListItem list={listData} className="" />
+      <FoodButtonList list={listData} className="" />
     </div>
   );
 };
 
-export default ShoppingList;
+export default ShoppingCard;

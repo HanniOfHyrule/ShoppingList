@@ -1,2 +1,0 @@
-const FoodListItems = <div></div>;
-export default FoodListItems;

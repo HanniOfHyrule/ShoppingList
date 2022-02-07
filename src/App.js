@@ -1,14 +1,12 @@
-import "./App.css";
-import "./components/List.css";
-import "./components/AddItem.css";
-import ShoppingList from "./components/ShoppingList";
+// import "./App.css";
+import ShoppingCard from "./components/ShoppingCard";
 import MainHeader from "./components/MainHeader";
 
-function App() {
+function App(props) {
   return (
     <div className="App-header">
       <MainHeader />
-      <ShoppingList />
+      <ShoppingCard />
     </div>
   );
 }

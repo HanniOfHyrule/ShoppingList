@@ -3,14 +3,14 @@
 }
 
 .App-header {
-  background-color: #213031;
+  background-color: #0e2024;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 1vmin);
-  color: white;
+  color: #D98859;
   letter-spacing: 1.2rem;
   padding: 0px 80px 0px 92px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

@@ -1,16 +1,16 @@
-import "./List.css";
+// import "./PressedButton.css";
 import { useState } from "react";
 
 // Listen status und
-const List = ({ list }) => {
+const FoodListItem = ({ list }) => {
   const [name, setName] = useState();
   const clickHandler = () => {
     setName(name);
-    console.log(name);
+    return setName;
   };
 
   return (
-    <ul className="boxForItems">
+    <ul className="itemList">
       {list
         .sort(function (a, b) {
           if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -22,17 +22,17 @@ const List = ({ list }) => {
           return 0;
         })
         .map((item) => (
-          <button
-            className="foodListItems"
+          <ul
+            className="bg-green-200 text-center text-lg rounded-lg m-3"
             key={item.id}
             onClick={clickHandler}
-            type="submit">
+            type="submit"
+          >
             {item.name}
-            {/*<button type="submit" id="delete" name="delete" />*/}
-          </button>
+          </ul>
         ))}
     </ul>
   );
 };
 
-export default List;
+export default FoodListItem;
