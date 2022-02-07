@@ -6,7 +6,9 @@ function MainHeader() {
   return (
     <div className="App">
       <header className="header">
-        <h1>Shopping List</h1>
+        <h1 className="space-x-[20px] font-fontFamily font-xl text-5xl ">
+          Shopping Card
+        </h1>
       </header>
     </div>
   );
