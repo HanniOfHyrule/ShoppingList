@@ -1,41 +1,43 @@
-import { useRef } from "react";
-// import "./AddItem.css";
+import React, { useState } from "react";
 
-const AddItem = ({ name, onChange: handleChange, onAdd }) => {
-  const inputRef = useRef();
+const AddItem = ({ onAdd }) => {
+  const [name, setName] = useState("");
+
   const handleKeyPress = (e) => {
-    if (e.key === "Enter" && inputRef.current.value !== "") {
-      onAdd();
+    if (e.key === "Enter") {
+      onAdd(name);
+      e.target.preventDefault();
     }
   };
 
   const handleClick = () => {
-    if (inputRef.current.value !== "") {
-      onAdd();
+    if (handleKeyPress !== "click") {
+      onAdd(name);
     }
   };
 
+  function handleChange(event) {
+    setName(event.target.value);
+  }
+
   return (
-    <form>
-      <div>
-        <input
-          className="object-center bg-green-200 hover:bg-orange-500 rounded m-11 text-white text"
-          type="text"
-          ref={inputRef}
-          value={name}
-          onChange={handleChange}
-          onKeyPress={handleKeyPress}
-        />
-        <button
-          type="button"
-          id="btnSearch"
-          onClick={handleClick}
-          className="bg-orange-300 hover:bg-red-400 text-black py-2 px-4 rounded mx-11 text-sm"
-        >
-          Add
-        </button>
-      </div>
-    </form>
+    <div>
+      <input
+        className="object-center bg-rose hover:bg-lime rounded m-5 text-white text"
+        type="text"
+        value={name}
+        onChange={handleChange}
+        onKeyPress={handleKeyPress}
+      />
+      <button
+        type="button"
+        id="btnSearch"
+        onClick={handleClick}
+        className="bg-orange hover:bg-red text-black py-2 px-4 rounded mx-11 text-sm"
+      >
+        Add
+      </button>
+    </div>
   );
 };
 

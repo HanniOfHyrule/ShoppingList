@@ -1,18 +1,16 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-header {
-  background-color: #0e2024;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(to bottom right, #9a3b3f, white);
+  min-height: 50vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(30px + 1vmin);
-  color: #D98859;
+  font-size: calc(20px + 1vmin);
+  color: #71536b;
   letter-spacing: 1.2rem;
-  padding: 0px 80px 0px 92px;
+  padding: 30px 50px 20px 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }

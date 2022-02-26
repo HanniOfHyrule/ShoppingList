@@ -1,4 +1,4 @@
-/* .visually-hidden {
+.visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -32,4 +32,4 @@ input[type="text"] {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 15px 15px;
   padding: 0;
-} */
+}

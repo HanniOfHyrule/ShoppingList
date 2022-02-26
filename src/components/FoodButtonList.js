@@ -1,4 +1,3 @@
-// import "./FoodButtonList.css";
 import { useState } from "react";
 
 const FoodButtonList = ({ list }) => {
@@ -11,8 +10,8 @@ const FoodButtonList = ({ list }) => {
   console.log(list);
 
   return (
-    <div>
-      <ul className="boxForItems grid grid-cols-2 " onChange={handleChange}>
+    <div className="foodlistbutton">
+      <ul className="" onChange={handleChange}>
         {list
           .sort(function (a, b) {
             if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -25,7 +24,7 @@ const FoodButtonList = ({ list }) => {
           })
           .map((addItem) => (
             <button
-              className=" bg-green-200 hover:bg-orange-500 rounded-lg m-3 text-black text-lg px-4 py-4 row-start-2 row-end-2 "
+              className=" bg-purple hover:bg-red rounded-lg px-2 text-white text-lg"
               key={addItem.id}
               onClick={handleChange}
               type="submit"

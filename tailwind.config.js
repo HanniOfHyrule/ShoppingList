@@ -4,6 +4,15 @@ const tailwindcss = require("tailwindcss");
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    colors: {
+      purple: "#71536B",
+      rose: "#EAD0BF",
+      black: "#171717",
+      white: "#fafafa",
+      lime: "#CAC977",
+      red: "#9A3B3F",
+      orange: "#F2AA6B",
+    },
     extend: {
       spacing: {
         1: "8px",
