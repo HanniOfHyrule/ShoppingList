@@ -1,5 +1,5 @@
-// import "./PressedButton.css";
 import { useState } from "react";
+import classes from "./FoodListItem.module.css";
 
 // Listen status und
 const FoodListItem = ({ list }) => {
@@ -8,9 +8,9 @@ const FoodListItem = ({ list }) => {
     setName(name);
     return setName;
   };
-
+  console.log(list);
   return (
-    <ul className="itemList">
+    <ul className={classes.foodlistitem} type="Checkbox">
       {list
         .sort(function (a, b) {
           if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -22,12 +22,7 @@ const FoodListItem = ({ list }) => {
           return 0;
         })
         .map((item) => (
-          <ul
-            className="bg-green-200 text-center text-lg rounded-lg m-3"
-            key={item.id}
-            onClick={clickHandler}
-            type="submit"
-          >
+          <ul type="Checkbox" key={item.id} onClick={clickHandler}>
             {item.name}
           </ul>
         ))}

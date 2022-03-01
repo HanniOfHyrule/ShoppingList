@@ -1,0 +1,22 @@
+.foodlistitem {
+  text-align: left;
+  height: 300px;
+  margin-top: 50px;
+  width: 180px;
+  float: left;
+  background-color: white;
+  margin-left: 1rem;
+  border-radius: 10px;
+  animation: list-appear 1s ease-out forwards;
+}
+@keyframes list-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

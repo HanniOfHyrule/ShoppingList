@@ -1,10 +1,10 @@
 // import "./App.css";
-import ShoppingCard from "./components/ShoppingCard";
-import MainHeader from "./components/MainHeader";
+import ShoppingCard from "./components/UI/ShoppingCard";
+import MainHeader from "./components/Layout/MainHeader";
 
 function App(props) {
   return (
-    <div className="App-header">
+    <div className="App">
       <MainHeader />
       <ShoppingCard />
     </div>
