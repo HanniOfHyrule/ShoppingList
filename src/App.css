@@ -1,4 +1,4 @@
-.visually-hidden {
+/* .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -9,27 +9,7 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-variant: small-caps;
-}
-
-input[type="text"] {
-  background-color: #a68877;
-  color: rgb(0, 0, 0);
-  width: 100%;
-  box-sizing: border-box;
-  border: 3px solid #a68877;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: left;
-  background-position: 0px 10px;
-
-  padding: 12px 20px 12px 10px;
-  box-shadow: 3px 3px 3px 1px #00000093;
-}
-
-.boxForItems {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 15px 15px;
-  padding: 0;
+} */
+.App {
+  margin: 0;
 }

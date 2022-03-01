@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classes from "./FoodListItem.module.css";
 
 // Listen status und
 const FoodListItem = ({ list }) => {
@@ -9,7 +10,7 @@ const FoodListItem = ({ list }) => {
   };
   console.log(list);
   return (
-    <ul className="foodlistitem" type="Checkbox">
+    <ul className={classes.foodlistitem} type="Checkbox">
       {list
         .sort(function (a, b) {
           if (a.name.toLowerCase() < b.name.toLowerCase()) {

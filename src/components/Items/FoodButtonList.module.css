@@ -1,0 +1,19 @@
+.foodlistbutton {
+  margin: 2rem 5rem 2rem 15rem;
+  display: flex;
+  padding: 1rem;
+  box-shadow: 0 2px 8px black;
+  border-radius: 14px;
+  animation: list-appear 1s ease-out forwards;
+}
+@keyframes list-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

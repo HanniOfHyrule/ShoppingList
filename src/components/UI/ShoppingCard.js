@@ -1,11 +1,11 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid"; // uuid zufallsbasierte eindeutige ID
-import AddItem from "./AddItem";
-import FoodListItem from "./FoodListItem";
+import AddItem from "../Items/AddItem";
+import FoodListItem from "../Items/FoodListItem";
 import { useState, useEffect } from "react";
-import FoodButtonList from "./FoodButtonList";
-import { addFoodItem, getFoodItems } from "../SupabaseClient";
-import "./ShoppingCard.css";
+import FoodButtonList from "../Items/FoodButtonList";
+import { addFoodItem, getFoodItems } from "../../SupabaseClient";
+import classes from "./ShoppingCard.module.css";
 
 const ShoppingCard = () => {
   const [listData, setListData] = useState([]);
@@ -26,10 +26,12 @@ const ShoppingCard = () => {
   }, []);
 
   return (
-    <div className="container">
-      <AddItem onAdd={handleAdd} className="additem" />
-      <FoodListItem list={listData} className="foodlistitem" />
-      <FoodButtonList list={listData} className="foodlistbutton" />
+    <div className={classes.container}>
+      <AddItem onAdd={handleAdd} className={classes.additem} />
+      <div className={classes.wrapper}>
+        <FoodListItem list={listData} className={classes.foodlistitem} />
+        <FoodButtonList list={listData} className={classes.foodlistbutton} />
+      </div>
     </div>
   );
 };

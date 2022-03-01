@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classes from "./FoodButtonList.module.css";
 
 const FoodButtonList = ({ list }) => {
   const [addItem, setAddItem] = useState("");
@@ -10,7 +11,7 @@ const FoodButtonList = ({ list }) => {
   console.log(list);
 
   return (
-    <div className="foodlistbutton">
+    <div className={classes.foodlistbutton}>
       <ul className="" onChange={handleChange}>
         {list
           .sort(function (a, b) {
@@ -24,7 +25,7 @@ const FoodButtonList = ({ list }) => {
           })
           .map((addItem) => (
             <button
-              className=" bg-purple hover:bg-red rounded-lg px-2 text-white text-lg"
+              className={classes.button}
               key={addItem.id}
               onClick={handleChange}
               type="submit"

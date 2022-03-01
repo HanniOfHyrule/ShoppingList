@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classes from "./AddItem.module.css";
 
 const AddItem = ({ onAdd }) => {
   const [name, setName] = useState("");
@@ -21,9 +22,9 @@ const AddItem = ({ onAdd }) => {
   }
 
   return (
-    <div>
+    <div className={classes.container}>
       <input
-        className="object-center bg-rose hover:bg-lime rounded m-5 text-white text"
+        className={classes.input}
         type="text"
         value={name}
         onChange={handleChange}
@@ -33,7 +34,7 @@ const AddItem = ({ onAdd }) => {
         type="button"
         id="btnSearch"
         onClick={handleClick}
-        className="bg-orange hover:bg-red text-black py-2 px-4 rounded mx-11 text-sm"
+        className={classes.button}
       >
         Add
       </button>
