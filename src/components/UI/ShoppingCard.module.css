@@ -1,37 +1,27 @@
 .container {
   margin: 20px 20px 20px 20px;
-
-  width: 25%;
 }
 
 .wrapper {
+  margin-top: 1%;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: normal;
-  align-items: normal;
-  align-content: normal;
+  justify-content: left;
+  align-content: left;
+  gap: 8rem;
+  float: left;
+}
+.foodlistitem {
+  flex: 0 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 20%;
 }
 
-.foodlistitem {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-}
-.foodlistbutton {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+.foodbuttonlist {
+  flex: 0 0 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex: left;
+  float: left;
 }
