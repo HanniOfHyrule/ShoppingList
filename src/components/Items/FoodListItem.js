@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./FoodListItem.module.css";
 
 // Listen status und
-const FoodListItem = ({ list }) => {
+const FoodListItem = ({ list }, onDelete) => {
   const [name, setName] = useState();
   const clickHandler = () => {
     setName(name);
@@ -24,7 +24,13 @@ const FoodListItem = ({ list }) => {
         .map((item) => (
           <ul key={item.id} onClick={clickHandler} className={classes.item}>
             {item.name}
-           
+            <button
+              type="button"
+              onclick={onDelete}
+              className={classes.deletebutton}
+            >
+              X
+            </button>
           </ul>
         ))}
     </ul>
