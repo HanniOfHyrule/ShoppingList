@@ -1,0 +1,35 @@
+.container {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: -7rem;
+  position: absolute;
+  background-color: #f4d0b6;
+  color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.input {
+  text-align: left;
+  border: transparent;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 20rem;
+}
+
+.button {
+  margin: 25px;
+  padding: 10px;
+  align-items: center;
+  color: white;
+  background-color: #cf0247;
+  border-radius: 12px;
+  border: transparent;
+}
+button:hover {
+  background-color: #730024;
+  border-radius: 10px;
+  border: transparent;
+}

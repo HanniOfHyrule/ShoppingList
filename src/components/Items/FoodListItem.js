@@ -1,16 +1,16 @@
-import "./List.css";
 import { useState } from "react";
+import classes from "./FoodListItem.module.css";
 
 // Listen status und
-const List = ({ list }) => {
+const FoodListItem = ({ list }, onDelete) => {
   const [name, setName] = useState();
   const clickHandler = () => {
     setName(name);
-    console.log(name);
+    return setName;
   };
-
+  console.log(list);
   return (
-    <ul className="boxForItems">
+    <ul className={classes.foodlistitem}>
       {list
         .sort(function (a, b) {
           if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -22,17 +22,19 @@ const List = ({ list }) => {
           return 0;
         })
         .map((item) => (
-          <button
-            className="foodListItems"
-            key={item.id}
-            onClick={clickHandler}
-            type="submit">
+          <ul key={item.id} onClick={clickHandler} className={classes.item}>
             {item.name}
-            {/*<button type="submit" id="delete" name="delete" />*/}
-          </button>
+            <button
+              type="button"
+              onclick={onDelete}
+              className={classes.deletebutton}
+            >
+              X
+            </button>
+          </ul>
         ))}
     </ul>
   );
 };
 
-export default List;
+export default FoodListItem;

@@ -1,0 +1,26 @@
+.item {
+  background-color: #f4d0b6;
+  border-radius: 15px;
+  text-align: left;
+  padding-left: 20%;
+  width: 150%;
+  animation: list-appear 1s ease-out forwards;
+}
+@keyframes list-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.deletebutton {
+  color: red;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  left: 190px;
+}
