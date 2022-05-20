@@ -1,11 +1,14 @@
-.foodlistbutton {
-  margin: 2rem 5rem 2rem 15rem;
-  display: flex;
-  padding: 1rem;
-  box-shadow: 0 2px 8px black;
-  border-radius: 14px;
+.buttondiv {
+  margin-top: 2%;
+  background-color: #f4d0b6;
+  border-radius: 15px;
+  text-align: left;
+  padding: 5px;
   animation: list-appear 1s ease-out forwards;
+  min-width: min-content;
 }
+/* ToDo responsive - Buttons unter der Liste auf mobil geräten ab einer gewissen breite */
+
 @keyframes list-appear {
   from {
     opacity: 0;
@@ -16,4 +19,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.button {
+  background-color: #cf0247;
+  border-radius: 12px;
+  border: transparent;
+  padding: 10px;
+  margin: 5px;
 }

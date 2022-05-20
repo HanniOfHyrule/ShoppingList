@@ -1,5 +1,5 @@
 import React from "react";
-import { v4 as uuidv4 } from "uuid"; // uuid zufallsbasierte eindeutige ID
+import { v4 as uuidv4 } from "uuid";
 import AddItem from "../Items/AddItem";
 import FoodListItem from "../Items/FoodListItem";
 import { useState, useEffect } from "react";
@@ -25,12 +25,20 @@ const ShoppingCard = () => {
     fetchData();
   }, []);
 
+  const deleteHandler = (e) => {
+  
+  };
+
   return (
     <div className={classes.container}>
       <AddItem onAdd={handleAdd} className={classes.additem} />
       <div className={classes.wrapper}>
-        <FoodListItem list={listData} className={classes.foodlistitem} />
-        <FoodButtonList list={listData} className={classes.foodlistbutton} />
+        <FoodListItem
+          list={listData}
+          className={classes.foodlistitem}
+          onDelete={deleteHandler}
+        />
+        <FoodButtonList list={listData} className={classes.foodbuttonlist} />
       </div>
     </div>
   );

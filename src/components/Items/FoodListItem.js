@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./FoodListItem.module.css";
 
 // Listen status und
-const FoodListItem = ({ list }) => {
+const FoodListItem = ({ list }, onDelete) => {
   const [name, setName] = useState();
   const clickHandler = () => {
     setName(name);
@@ -10,7 +10,7 @@ const FoodListItem = ({ list }) => {
   };
   console.log(list);
   return (
-    <ul className={classes.foodlistitem} type="Checkbox">
+    <ul className={classes.foodlistitem}>
       {list
         .sort(function (a, b) {
           if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -22,8 +22,15 @@ const FoodListItem = ({ list }) => {
           return 0;
         })
         .map((item) => (
-          <ul type="Checkbox" key={item.id} onClick={clickHandler}>
+          <ul key={item.id} onClick={clickHandler} className={classes.item}>
             {item.name}
+            <button
+              type="button"
+              onclick={onDelete}
+              className={classes.deletebutton}
+            >
+              X
+            </button>
           </ul>
         ))}
     </ul>

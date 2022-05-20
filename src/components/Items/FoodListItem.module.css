@@ -1,12 +1,9 @@
-.foodlistitem {
+.item {
+  background-color: #f4d0b6;
+  border-radius: 15px;
   text-align: left;
-  height: 300px;
-  margin-top: 50px;
-  width: 180px;
-  float: left;
-  background-color: white;
-  margin-left: 1rem;
-  border-radius: 10px;
+  padding-left: 20%;
+  width: 150%;
   animation: list-appear 1s ease-out forwards;
 }
 @keyframes list-appear {
@@ -19,4 +16,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.deletebutton {
+  color: red;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  left: 190px;
 }

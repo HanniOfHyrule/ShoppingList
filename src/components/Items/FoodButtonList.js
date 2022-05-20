@@ -8,10 +8,9 @@ const FoodButtonList = ({ list }) => {
     setAddItem(addItem);
     return setAddItem;
   };
-  console.log(list);
 
   return (
-    <div className={classes.foodlistbutton}>
+    <div className={classes.buttondiv}>
       <ul className="" onChange={handleChange}>
         {list
           .sort(function (a, b) {
